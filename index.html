@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramiro González – Full Stack Developer</title>
+  <meta name="description" content="Desarrollador Full Stack apasionado por crear soluciones eficientes y escalables. React, TypeScript, Node.js, Express y PostgreSQL.">
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ─── NAVEGACIÓN ─── -->
+<nav id="navbar">
+  <a href="#inicio" class="nav-logo">RG<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+    <li><a href="#sobre-mi" onclick="closeMenu()">Sobre mí</a></li>
+    <li><a href="#habilidades" onclick="closeMenu()">Habilidades</a></li>
+    <li><a href="#experiencia" onclick="closeMenu()">Experiencia</a></li>
+    <li><a href="#proyectos" onclick="closeMenu()">Proyectos</a></li>
+    <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">
+      <div class="hero-tag-dot"></div>
+      Disponible para proyectos
+    </div>
+    <h1 class="hero-name">
+      Ramiro<br>
+      <span class="accent">González</span>
+    </h1>
+    <p class="hero-role">Desarrollador Full Stack &middot; React &middot; Node.js &middot; TypeScript</p>
+    <p class="hero-desc">
+      Construyo APIs y aplicaciones web eficientes, escalables y mantenibles.
+      Apasionado por el código limpio y las soluciones bien estructuradas.
+    </p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">Ubicación</span>
+        <span class="value">Bogotá, Colombia</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Edad</span>
+        <span class="value">28 años</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Experiencia</span>
+        <span class="value">2+ años</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">Disponibilidad</span>
+        <span class="value">Freelance / Remoto</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+      <a href="#contacto" class="btn-outline">Contáctame</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOBRE MÍ ─── -->
+<section id="sobre-mi">
+  <div class="section-inner">
+    <p class="section-label">Quién soy</p>
+    <h2 class="section-title">Sobre mí</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Soy un desarrollador Full Stack nacido en Sincé, Sucre. Me gradué como tecnólogo en
+          Análisis y Desarrollo de Sistemas de Información en el <strong>SENA</strong> en 2023,
+          donde lideré proyectos de optimización de procesos.
+        </p>
+        <p>
+          Trabajé en <strong>Globaltek Development</strong> manteniendo sistemas de facturación
+          electrónica con Java, Spring Boot y SQL Server. Como freelancer he construido plataformas
+          completas: redes sociales, apps de productividad, sistemas de rifas y portales de noticias.
+        </p>
+        <p>
+          Me apasiona escribir código limpio, escalable y fácil de mantener.
+          Siempre buscando la mejor arquitectura para cada problema.
+        </p>
+        <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="mailto:ramirodjaltor2016@gmail.com" class="btn-primary">Descargar CV</a>
+          <a href="#contacto" class="btn-outline">Hablemos</a>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Años de experiencia</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Proyectos completados</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Tecnologías</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Compromiso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HABILIDADES ─── -->
+<section id="habilidades" style="background: var(--surface);">
+  <div class="section-inner">
+    <p class="section-label">Tech Stack</p>
+    <h2 class="section-title">Habilidades</h2>
+    <p class="section-subtitle">Tecnologías que manejo con confianza en proyectos reales.</p>
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ─── EXPERIENCIA & EDUCACIÓN ─── -->
+<section id="experiencia">
+  <div class="section-inner">
+    <p class="section-label">Trayectoria</p>
+    <h2 class="section-title">Experiencia & Educación</h2>
+    <div class="exp-grid">
+      <div>
+        <p class="exp-col-title" style="color: var(--accent);">💼 Experiencia</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2023 – 2025</div>
+            <div class="tl-title">Desarrollador Web Full Stack</div>
+            <div class="tl-org">Globaltek Development</div>
+            <div class="tl-desc">
+              Mantenimiento y mejora de sistemas de facturación electrónica. Resolución de incidencias,
+              optimización de funcionalidades y desarrollo de nuevas características.
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag">Java</span>
+              <span class="tl-tag">Spring Boot</span>
+              <span class="tl-tag">SQL Server</span>
+              <span class="tl-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-year">2023 – Presente</div>
+            <div class="tl-title">Desarrollador Freelance</div>
+            <div class="tl-org">Proyectos independientes</div>
+            <div class="tl-desc">
+              Plataformas completas frontend y backend. Despliegue en Render, Railway y servidores VPS.
+              Clientes de distintos sectores: restaurantes, entretenimiento, productividad.
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag">TypeScript</span>
+              <span class="tl-tag">React</span>
+              <span class="tl-tag">Node.js</span>
+              <span class="tl-tag">Supabase</span>
+              <span class="tl-tag">Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="exp-col-title" style="color: var(--accent2);">🎓 Educación</p>
+        <div class="timeline" style="--accent: var(--accent2);">
+          <div class="tl-item">
+            <div class="tl-dot" style="background: var(--accent2); box-shadow: 0 0 14px var(--accent2);"></div>
+            <div class="tl-year" style="color: var(--accent2);">2021 – 2023</div>
+            <div class="tl-title">Análisis y Desarrollo de Sistemas</div>
+            <div class="tl-org" style="color: var(--accent);">SENA</div>
+            <div class="tl-desc">
+              Tecnólogo en Análisis y Desarrollo de Sistemas de Información.
+              Destacado por liderar proyectos de optimización de procesos institucionales.
+            </div>
+            <div class="tl-tags">
+              <span class="tl-tag">Sistemas</span>
+              <span class="tl-tag">Bases de datos</span>
+              <span class="tl-tag">Redes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICIOS ─── -->
+<section id="servicios">
+  <div class="section-inner">
+    <p class="section-label">Lo que ofrezco</p>
+    <h2 class="section-title">Servicios</h2>
+    <p class="section-subtitle">Soluciones completas para llevar tu idea al siguiente nivel.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <div class="service-name">Diseño Web</div>
+        <div class="service-desc">Interfaces responsive, funcionales y atractivas centradas en la experiencia del usuario.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <div class="service-name">Desarrollo Full Stack</div>
+        <div class="service-desc">Aplicaciones completas front-end y back-end con las mejores tecnologías modernas.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔌</div>
+        <div class="service-name">APIs REST</div>
+        <div class="service-desc">Desarrollo eficiente de APIs con Node.js para aplicaciones dinámicas y escalables.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🖥️</div>
+        <div class="service-name">UI/UX Design</div>
+        <div class="service-desc">Diseño intuitivo centrado en la experiencia del usuario con atención al detalle visual.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROYECTOS ─── -->
+<section id="proyectos" style="background: var(--surface);">
+  <div class="section-inner">
+    <p class="section-label">Mi trabajo</p>
+    <h2 class="section-title">Proyectos</h2>
+    <p class="section-subtitle">Plataformas reales construidas de principio a fin.</p>
+    <div class="projects-filter" id="filterBar"></div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ─── CONTACTO ─── -->
+<section id="contacto">
+  <div class="section-inner">
+    <p class="section-label">Hablemos</p>
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          ¿Tienes un proyecto en mente o quieres colaborar? Estoy disponible para
+          trabajo freelance y oportunidades remotas. No dudes en escribirme.
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span class="label">Ubicación</span>
+              <span class="value">Sincé - Sucre D 15 # 14-47</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-detail">
+              <span class="label">Email</span>
+              <span class="value">ramirodjaltor2016@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-detail">
+              <span class="label">Teléfono</span>
+              <span class="value">+57 300 235 3297</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-detail">
+              <span class="label">WhatsApp</span>
+              <span class="value">+57 300 235 3297</span>
+            </div>
+          </div>
+        </div>
+        <div class="social-links">
+          <!-- Reemplaza # con tus URLs reales -->
+          <a href="https://github.com/" target="_blank" class="social-btn" title="GitHub">GH</a>
+          <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram">IG</a>
+          <a href="https://facebook.com/" target="_blank" class="social-btn" title="Facebook">FB</a>
+          <a href="https://wa.me/573215561158" target="_blank" class="social-btn" title="WhatsApp">WA</a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Nombre</label>
+            <input class="form-input" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Correo</label>
+            <input class="form-input" type="email" placeholder="tu@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Asunto</label>
+          <input class="form-input" type="text" placeholder="¿En qué puedo ayudarte?" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="align-self: flex-start;">
+          Enviar mensaje →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2026 <span>Ramiro González</span> · Bogotá, Colombia</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
