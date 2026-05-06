@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ramiro González – Full Stack Developer</title>
   <meta name="description" content="Desarrollador Full Stack apasionado por crear soluciones eficientes y escalables. React, TypeScript, Node.js, Express y PostgreSQL.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236ee7b7'/><text x='50' y='68' font-size='52' font-family='sans-serif' font-weight='700' text-anchor='middle' fill='%230a0a0f'>RG</text></svg>">
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -43,8 +45,9 @@
     </h1>
     <p class="hero-role">Desarrollador Full Stack &middot; React &middot; Node.js &middot; TypeScript</p>
     <p class="hero-desc">
-      Construyo APIs y aplicaciones web eficientes, escalables y mantenibles.
-      Apasionado por el código limpio y las soluciones bien estructuradas.
+      Desarrollo aplicaciones web completas con foco en el backend.
+      Node.js, TypeScript, React y bases de datos bien optimizadas.
+      De la idea al producto final.
     </p>
     <div class="hero-meta">
       <div class="hero-meta-item">
@@ -93,7 +96,7 @@
           Siempre buscando la mejor arquitectura para cada problema.
         </p>
         <div style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="mailto:ramirodjaltor2016@gmail.com" class="btn-primary">Descargar CV</a>
+          <a href="cv-ramiro.pdf" download="CV-Ramiro-Gonzalez.pdf" class="btn-primary">Descargar CV</a>
           <a href="#contacto" class="btn-outline">Hablemos</a>
         </div>
       </div>
@@ -179,16 +182,17 @@
           <div class="tl-item">
             <div class="tl-dot" style="background: var(--accent2); box-shadow: 0 0 14px var(--accent2);"></div>
             <div class="tl-year" style="color: var(--accent2);">2021 – 2023</div>
-            <div class="tl-title">Análisis y Desarrollo de Sistemas</div>
+            <div class="tl-title">Análisis y Desarrollo de Software</div>
             <div class="tl-org" style="color: var(--accent);">SENA</div>
             <div class="tl-desc">
               Tecnólogo en Análisis y Desarrollo de Sistemas de Información.
               Destacado por liderar proyectos de optimización de procesos institucionales.
             </div>
             <div class="tl-tags">
-              <span class="tl-tag">Sistemas</span>
+              <span class="tl-tag">JavaScript</span>
               <span class="tl-tag">Bases de datos</span>
-              <span class="tl-tag">Redes</span>
+              <span class="tl-tag">Git</span>
+              <span class="tl-tag">Algoritmos</span>
             </div>
           </div>
         </div>
@@ -252,60 +256,57 @@
         </p>
         <div class="contact-info">
           <div class="contact-item">
-            <div class="contact-icon">📍</div>
+            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
             <div class="contact-detail">
               <span class="label">Ubicación</span>
-              <span class="value">Sincé - Sucre D 15 # 14-47</span>
+              <span class="value">Bogotá, Colombia</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">✉️</div>
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div class="contact-detail">
               <span class="label">Email</span>
               <span class="value">ramirodjaltor2016@gmail.com</span>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">📞</div>
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div class="contact-detail">
               <span class="label">Teléfono</span>
               <span class="value">+57 300 235 3297</span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <div class="contact-detail">
-              <span class="label">WhatsApp</span>
-              <span class="value">+57 300 235 3297</span>
-            </div>
-          </div>
         </div>
         <div class="social-links">
-          <!-- Reemplaza # con tus URLs reales -->
-          <a href="https://github.com/" target="_blank" class="social-btn" title="GitHub">GH</a>
-          <a href="https://instagram.com/" target="_blank" class="social-btn" title="Instagram">IG</a>
-          <a href="https://facebook.com/" target="_blank" class="social-btn" title="Facebook">FB</a>
-          <a href="https://wa.me/573215561158" target="_blank" class="social-btn" title="WhatsApp">WA</a>
+          <a href="https://github.com/Ramiro2897" target="_blank" class="social-btn" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ramirodev" target="_blank" class="social-btn" title="Instagram">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://wa.me/573002353297" target="_blank" class="social-btn" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" id="form">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Nombre</label>
-            <input class="form-input" type="text" placeholder="Tu nombre" required>
+            <input class="form-input" type="text" name="emailjs_name" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
             <label class="form-label">Correo</label>
-            <input class="form-input" type="email" placeholder="tu@email.com" required>
+            <input class="form-input" type="email" name="emailjs_email" placeholder="tu@email.com" required>
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">Asunto</label>
-          <input class="form-input" type="text" placeholder="¿En qué puedo ayudarte?" required>
+          <input class="form-input" type="text" name="emailjs_subject" placeholder="¿En qué puedo ayudarte?" required>
         </div>
         <div class="form-group">
           <label class="form-label">Mensaje</label>
-          <textarea class="form-textarea" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          <textarea class="form-textarea" name="emailjs_message" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
         </div>
         <button type="submit" class="btn-primary" style="align-self: flex-start;">
           Enviar mensaje →
@@ -320,6 +321,7 @@
   <p>© 2026 <span>Ramiro González</span> · Bogotá, Colombia</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

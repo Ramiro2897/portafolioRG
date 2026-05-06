@@ -57,50 +57,50 @@
       name: 'Tasly', icon: '✅',
       desc: 'App de tareas, metas y frases con mensajes inteligentes y seguimiento de progreso.',
       tags: ['React','Node.js','TypeScript'], cat: ['app','api'],
-      url: '#'
+      url: 'https://tasly.vercel.app/Home'
     },
     {
       name: 'Connected Social Media', icon: '🔗',
       desc: 'Red social tipo comunidad con perfiles, publicaciones e interacciones en tiempo real.',
       tags: ['React','Supabase','TypeScript'], cat: ['app'],
-      url: '#'
+      url: 'https://github.com/Ramiro2897/CONNECTED'
     },
     {
       name: 'LuckyDrawHub', icon: '🎯',
       desc: 'Plataforma de rifas en línea con sistema de sorteos y gestión de participantes.',
       tags: ['Node.js','React','PostgreSQL'], cat: ['app','api'],
-      url: '#'
+      url: 'https://github.com/Ramiro2897/LuckyDrawHub'
     },
     {
       name: 'Manhatam Restaurante', icon: '🍽️',
       desc: 'Sitio web informativo para restaurante con menú, reservas y diseño atractivo.',
       tags: ['HTML','CSS','JavaScript'], cat: ['js'],
-      url: '#'
+      url: 'https://github.com/Ramiro2897/Menu-carta'
     },
     {
       name: 'Hangman Game', icon: '🎮',
       desc: 'Juego del ahorcado con lógica personalizada y diseño responsivo.',
       tags: ['JavaScript','CSS'], cat: ['js'],
-      url: '#'
+      url: 'https://juegoahorcadoonline.onrender.com'
     },
     {
       name: 'Portal de Noticias', icon: '📰',
       desc: 'Frontend que consume una API de noticias en tiempo real de Colombia.',
       tags: ['React','REST API'], cat: ['app','js'],
-      url: '#'
+      url: 'https://actualidad-digital.vercel.app/'
     },
     {
       name: 'Auth System', icon: '🔐',
       desc: 'Sistema de autenticación completo con login y sesiones persistentes front + back.',
       tags: ['Node.js','Express','JWT'], cat: ['api'],
-      url: '#'
+      url: 'https://auth-system-frontend-beige.vercel.app/'
     },
     {
-      name: 'CENU – DANE', icon: '📊',
-      desc: 'Sistema de gestión de datos educativos para el DANE.',
-      tags: ['TypeScript','Node.js'], cat: ['api'],
-      url: '#'
-    },
+      name: 'VIP Directory 🔞', icon: '💎',
+      desc: 'Plataforma web completa con sistema de membresías, perfiles y panel de administración.',
+      tags: ['React','Node.js','PostgreSQL'], cat: ['app','api'],
+      url: 'https://vip-directory-frontend.vercel.app/'
+    }
   ];
 
   const filters = [
@@ -131,7 +131,7 @@
       .forEach((p, i) => {
         const c = colors[i % colors.length];
         pg.innerHTML += `
-          <a class="project-card" href="${p.url}" target="_blank">
+          <${p.url ? `a href="${p.url}" target="_blank"` : 'div'} class="project-card">
             <div class="project-card-top">
               <div class="project-icon" style="background:${c}1a;border:1px solid ${c}30">${p.icon}</div>
               <div class="project-name">${p.name}</div>
@@ -146,14 +146,32 @@
   renderProjects('all');
 
   // ── Form submit (conecta con tu backend o Formspree) ──
-  function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button[type=submit]');
-    btn.textContent = '¡Enviado! ✓';
-    btn.style.background = '#6ee7b7';
-    setTimeout(() => {
-      btn.textContent = 'Enviar mensaje →';
-      btn.style.background = '';
-      e.target.reset();
-    }, 3000);
-  }
+  emailjs.init('GNY9jkBYkKX3t2Z8N');
+
+  document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+  
+    const btn = this.querySelector('button[type=submit]');
+    btn.textContent = 'Enviando...';
+    btn.disabled = true;
+  
+    emailjs.sendForm('default_service', 'template_u6wck7l', this)
+      .then(() => {
+        btn.textContent = '¡Enviado! ✓';
+        btn.style.background = '#6ee7b7';
+        setTimeout(() => {
+          btn.textContent = 'Enviar mensaje →';
+          btn.style.background = '';
+          btn.disabled = false;
+          this.reset();
+        }, 3000);
+      }, () => {
+        btn.textContent = 'Error, intenta de nuevo';
+        btn.style.background = '#f87171';
+        setTimeout(() => {
+          btn.textContent = 'Enviar mensaje →';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
+  });
